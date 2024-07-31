@@ -28,7 +28,7 @@ local errorCodes = {
     ContentModified = -32801,
 }
 
-local vimLspGetClients = vim.lsp.get_clients and vim.lsp.get_clients or vim.lsp.get_active_clients
+local vimLspGetClients = vim.lsp.get_clients -- and vim.lsp.get_clients or vim.lsp.get_active_clients
 
 function NvimClient.request(client, method, params, bufnr)
     return promise(function(resolve, reject)
